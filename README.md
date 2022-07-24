@@ -10,7 +10,6 @@ Details about cpu:
 lscpu
 ```
 ***/dev*** is the device directory.
-
 ***/proc*** is the process directory.
 
 To see the modules:
