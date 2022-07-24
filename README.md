@@ -4,13 +4,13 @@ Kernel release number/System Architecture/Everything:
 uname -r
 uname -m
 uname -a
-```
+```  
 Details about cpu:
 ```
 lscpu
 ```
-***/dev*** is the device directory.
-***/proc*** is the process directory.
+***/dev*** is the device directory.  
+***/proc*** is the process directory.  
 
 To see the modules:
 ```
