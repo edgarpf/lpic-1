@@ -1,71 +1,64 @@
 # LPIC-1
-Kernel release number/System Architecture/Everything:
+
+To know type of the command (internal or external)
 ```
-uname -r
-uname -m
-uname -a
+type bash
 ```  
-Details about cpu:
+Which types of shells are in your system?
 ```
-lscpu
+chsh -l
 ```
-***/dev*** is the device directory.  
-***/proc*** is the process directory.  
-
-To see the modules:
+Show session number in terminal
 ```
-lsmod
+echo $SHLVL
 ```
-Show details about a specific module:
+Show alias and create one.
 ```
-modinfo name_of_module
+alias
+alias ls="ls -a"
 ```
-Show the author of a specific module:
+Commands executed in sequence:
 ```
-modinfo -a name_of_module
+command1 ; command2
 ```
-Show what a specific module does:
+The second command will be executed only if the first one returns success:
 ```
-modinfo -d name_of_module
+command1 && command2
 ```
-Show license:
+The second command will be executed only if the first one returns failed:
 ```
-modinfo -l name_of_module
+command1 || command2
 ```
-Remove module:
+Use command output
 ```
-sudo modprobe -r name_of_module
+rpm -qf $(which ifconfig)
+grep -i ext4 /boot/config-`uname -r`
 ```
-Add module again:
+To know who is using shell
 ```
-sudo modprobe name_of_module
-```
-List all PSI devices:
-```
-lspsi
-lspsi -v
-lspsi -vv
-lspsi -vvv
-```
-List all PSI devices with modules:
-```
-lspsi -k
-```
-List all USB devices:
-```
-lsusb
-```
-See the process:
-```
-pstree -p
-```
-See the messages from the kernel ring buffer:
-```
-dmesg
-```
-May be used to control the contens of systemd(1). Use ***-k** to show only kernel content:
-```
-journalctl
-journalctl -k
+whoami
 ```
 
+```
+history
+!11 (execute command eleventh shown in history)
+!-i (execute first command beginning with i)
+history -c (clear history)
+echo $HISTFILE
+echo $HISTSIZE (max number of insertions)
+```
+
+Local and global variables:
+```
+LOCAL = "SOMETHING"
+export GLOBAL = "SOMETHING"
+
+unset GLOBAL
+set # list all variables
+env # list global variables
+echo "$UID" #0
+echo '$UID' #$UID 
+echo $PS1 $PS2 # primary and secondary prompt
+
+uname # informations about the machine. Use -p -m -s...
+```
