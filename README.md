@@ -1,8 +1,16 @@
 # LPIC-1
 
-To know type of the command (internal or external)
+To know the type of the command (internal or external)
 ```
-type bash
+type cd
+```
+Show current directory
+```
+pwd
+```  
+List hidden files (-a) with details (-l)
+```
+ls -la
 ```  
 Which types of shells are in your system?
 ```
@@ -12,7 +20,14 @@ Show session number in terminal
 ```
 echo $SHLVL
 ```
-Show alias and create one.
+Change session number and exit to the orginal one
+```
+echo $SHLVL
+bash
+echo $SHLVL
+exit
+```
+Show alias and create one
 ```
 alias
 alias ls="ls -a"
@@ -21,13 +36,17 @@ Commands executed in sequence:
 ```
 command1 ; command2
 ```
-The second command will be executed only if the first one returns success:
+The second command will be executed only if the first one returns success
 ```
 command1 && command2
 ```
-The second command will be executed only if the first one returns failed:
+The second command will be executed only if the first one returns failed
 ```
 command1 || command2
+```
+Show path of the command
+```
+which ifconfig
 ```
 Use command output
 ```
@@ -42,10 +61,10 @@ whoami
 ```
 history
 !11 (execute command eleventh shown in history)
-!-i (execute first command beginning with i)
+!-i (execute last command beginning with i)
 history -c (clear history)
 echo $HISTFILE
-echo $HISTSIZE (max number of insertions)
+echo $HISTFILESIZE (max number of insertions)
 ```
 
 Local and global variables:
