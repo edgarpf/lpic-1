@@ -81,3 +81,65 @@ echo $PS1 $PS2 # primary and secondary prompt
 
 uname # informations about the machine. Use -p -m -s...
 ```
+The path of the command
+```
+which pwd
+```
+Search for a command
+```
+apropos lda
+man -k lda
+```
+Show path and path of the manual of a command
+```
+whereis pwd
+```
+Quotes
+```
+cd 'More than one word'
+cd "More than one word"
+echo $PWD
+echo "$PWD"
+/home/something
+echo '$PWD'
+'$PWD'
+```
+Show text with line number
+```
+cat -n file
+```
+Show text with line number except the empty lines
+```
+cat -b file
+cat file | nl
+nl file
+```
+Show number of lines/number of words/number of chars
+```
+wc -l file
+wc -c file
+wc -m file
+```
+Sort lines/inverse
+```
+sort file
+sort -r file
+```
+Sort lines/inverse
+```
+less file
+```
+Show the first 10/20 lines of a file/show everything except the 20 lines first lines
+```
+head file
+head -n 20 file
+head -n -20 file
+```
+Show the last 10/20 lines of a file/ show continuously
+```
+tail file
+tail -n 20 file
+tail -f file
+```
+
+
