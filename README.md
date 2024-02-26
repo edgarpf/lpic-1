@@ -141,5 +141,37 @@ tail file
 tail -n 20 file
 tail -f file
 ```
+Show no repetion in lines (remove repetion only in lines in sequence)
+```
+uniq file
+```
+Show only lines with repetion
+```
+uniq -q file
+```
+Show number of repetion for every line
+```
+uniq -c file
+```
+Show oct/hex from a file
+```
+od file
+od -tx file
+```
+Show files side by side
+```
+paste file1 file2
+```
+For each 3 lines split a file in other files
+```
+split -l 3 source destiny
+```
+Show the content of all files that begin with **file_**
+```
+cat file_*
+```
+
+
+
 
 
