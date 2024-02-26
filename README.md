@@ -170,6 +170,46 @@ Show the content of all files that begin with **file_**
 ```
 cat file_*
 ```
+Append text to a file
+```
+echo "test" >> file.txt
+```
+Generate hash of a file
+```
+md5sum file
+sha256sum file
+sha512sum file
+```
+Substitute first word test in the lines for test2 in the file
+```
+sed 's/test/test2/' file
+sed 's|test|test2|' file
+sed 's|test|test2|2' file (only second ocurrence)
+sed 's|test|test2|g' file (substitute everything)
+sed '1,25d' file (remove line 1-25)
+sed -i '1,25d' file (alter the file indeed, now only show in the console)
+```
+Uppercase all letters
+```
+tr 'a-z' 'A-Z'
+tr '[:lower:]' '[:upper:]'
+```
+Remove white spaces
+```
+tr -d ' '
+tr -d '[:blank:]'
+```
+Show only first and third columns
+```
+cut -d':' -f 1,3
+```
+Show only the first six chars.
+```
+cut -c1-6 file 
+```
+
+
+
 
 
 
