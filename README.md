@@ -1,5 +1,7 @@
 # LPIC-1
 
+## Exam 101
+
 To know the type of the command (internal or external)
 ```
 type cd
@@ -207,6 +209,17 @@ Show only the first six chars.
 ```
 cut -c1-6 file 
 ```
+Describe the type of a file
+```
+file file.txt
+```
+Show content of a xz/gz file
+```
+xzcat file.xz
+zcat file.gz
+bzcat file.bz2
+```
+
 
 
 
