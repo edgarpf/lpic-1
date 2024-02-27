@@ -254,7 +254,41 @@ tar -xvf file.tar -C /tmp
 gzip file.tar > file.tar.gz (mantain the original file)
 gzip -d file.tar.gz
 gunzip file.tar.gz
+
+bzip2 -k file.tar (maintain the original file)
+bunzip2 file.tar.bz2
+xz -k file.tar (maintain the original file)
+unxz file.tar.xz
 ```
+Copy file byte to byte
+```
+dd if=source of=destiny bs=1M count=1024
+```
+Special characters
+```
+mkdir dir{1..10}
+ls lib?
+cat file >> out.txt (append file)
+cat non_existing_file 2> error.txt (redirect error)
+cat file file2 &> output.txt (redirect stdout and error)
+```
+xargs to send output from the last command as args to another command
+```
+find /usr/sbin -iname 'x*' | xargs ls -l
+find /usr/sbin -iname 'x*' | xargs -i bash -c "echo listing file {}; ls {}"
+```
+tee to print the result of the command in the screen and send the result to a file 
+```
+cat file | tee output.txt
+cat file | tee -a output.txt (to append)
+```
+Process
+```
+```
+
+
+
+
 
 
 
