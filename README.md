@@ -233,7 +233,17 @@ mv file dir/
 Directories
 ```
 mkdir dir
-
+mkdir -m 750 dir (with permissions)
+mkdir -p dir1/dir2 (create two directories at once)
+rmdir dir (remove empty directory)
+```
+Find
+```
+find /etc -iname '*.conf' (find in /etc case insensitive)
+find -cmin -3 . (find all the files whose permissions changed in the last 3 min)
+find -ctime -3 . (find all the files whose permissions changed in the last 3 days)
+find -atime -3 . (find all the files that were acessed in the last 3 days)
+find -mtime -3 . (find all the files that were modified in the last 3 days)
 ```
 
 
