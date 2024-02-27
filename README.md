@@ -220,6 +220,21 @@ zcat file.gz
 bzcat file.bz2
 ```
 
+Create file
+```
+touch file
+touch -m file (just to update modify date)
+```
+Copy and move file
+```
+cp -b file dir/ (copy generating a backup file˜)
+mv file dir/
+```
+Directories
+```
+mkdir dir
+
+```
 
 
 
