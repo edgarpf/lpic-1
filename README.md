@@ -245,7 +245,16 @@ find -ctime -3 . (find all the files whose permissions changed in the last 3 day
 find -atime -3 . (find all the files that were acessed in the last 3 days)
 find -mtime -3 . (find all the files that were modified in the last 3 days)
 ```
+Compression/joins
+```
+tar -cvpf backup-name.tar /etc /var/logs
+tar tvf file.tar (show details of the files)
+tar -xvf file.tar -C /tmp
 
+gzip file.tar > file.tar.gz (mantain the original file)
+gzip -d file.tar.gz
+gunzip file.tar.gz
+```
 
 
 
