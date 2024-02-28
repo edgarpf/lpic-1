@@ -316,7 +316,15 @@ bg id
 nohup ping 8.8.8.8 & (execute in background even if session is terminated)
 cat nohup.out
 ```
-
+System
+```
+free (show memory details)
+free -m (show memory details in MB)
+uptime
+screen (generate another screen)
+screen ls (list screens)
+screen -r id (go to a specific screen)
+```
 
 
 
