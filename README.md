@@ -284,8 +284,38 @@ cat file | tee -a output.txt (to append)
 ```
 Process
 ```
+ps
+ps u (more details with columns)
+ps -u root
+ps f (tree format)
+pstree
+pstree -p (show pids)
+top (real time)
 ```
-
+Search pid 
+```
+pgrep name
+```
+Search pid with name spelled exactly
+```
+pidof rsyslogd
+```
+Kill process
+```
+kill -l (list signals)
+kill pid
+killall gedit 
+pkill firefo
+```
+Create and monitor process
+```
+less file & (execute in background)
+jobs (list process in background)
+fg id (take a process in background to foreground)
+bg id
+nohup ping 8.8.8.8 & (execute in background even if session is terminated)
+cat nohup.out
+```
 
 
 
