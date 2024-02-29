@@ -325,6 +325,49 @@ screen (generate another screen)
 screen ls (list screens)
 screen -r id (go to a specific screen)
 ```
+watch and tmux
+```
+watch iptables -nvL (execute the command each 2s)
+watch -n1 iptables -nvL (execute the command each second)
+tmux (simular to screen command)
+tmux ls
+tmux rename-session -t 0 newname
+tmux attach -t 0 (go to the session)
+tmux kill-session -t 0
+```
+Process priority change
+```
+nice -n 15 command (add less priority to a process, only for new processing)
+nice -n -1 command (add more priority but need permissions)
+renice -n 10 -p pid (only for acurrently executing process)
+```
+Saarch in text with regular expression
+```
+sed 's/nologin$/REGEX/' file
+sed -E 's/(nologin|false)$/REGEX/' file
+sed -E 's/ˆ(nologin|false)/REGEX/' file
+sed -E 's/(nologin|false)/REGEX/g' file (substitute all occurrences)
+sed -E 's/[Mm].../REGEX/' file
+
+grep -i root file (case insensitive)
+grep -v root file (except root)
+grep --color -E `root|daemon` file (you can use egrep without -E)
+fgrep does not use regular expression but it is quicker
+```
+vi
+```
+vi +290 file (go to the line)
+:set number (show line numbers
+:90 (go to the line)
+5 yy (copy 5 lines including the cursor line. Use p to paste)
+3 dd (to cut)
+/smtp (search for the word)
+:7,50s/echo/something (find and replace)
+:%s/echo/something (find and replace in all the lines)
+u works like a ctrl+z
+```
+
+
 
 
 
