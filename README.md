@@ -366,6 +366,34 @@ vi +290 file (go to the line)
 :%s/echo/something (find and replace in all the lines)
 u works like a ctrl+z
 ```
+SWtstem architeture
+```
+cat proc/cpuinfo
+lspci -k (show also modules)
+pslci -s id -v (show many details of specific resource)
+lsusb -t (show in tree format)
+lsmod
+
+dmesg (to inpect system initialization process)
+
+journalctl -b (show logs of initialization)
+journalctl -k (show logs of kernel)
+journal -u NetworkManger.service (show logs of a service)
+
+runlevel (show the last runlevel and the current one)
+systemctl get-default
+systemctl set-default multi-user.target
+
+shutdown
+reboot
+telinit
+systemctl reboot
+systemctl poweroff
+init/telinit 6 (restart)
+init/telinit 0 (power off)
+
+```
+
 
 
 
