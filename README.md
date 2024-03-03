@@ -391,8 +391,18 @@ systemctl reboot
 systemctl poweroff
 init/telinit 6 (restart)
 init/telinit 0 (power off)
-
 ```
+
+Packages
+```
+fdisk /dev/sda (list partitioning)
+df -hT (show file system)
+pvs (show physical volumes)
+vgs (show volume groups)
+lvs (show logic volumes)
+efibootmgr (edit initialization of efi)
+```
+
 
 
 
