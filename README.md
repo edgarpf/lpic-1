@@ -401,6 +401,61 @@ pvs (show physical volumes)
 vgs (show volume groups)
 lvs (show logic volumes)
 efibootmgr (edit initialization of efi)
+
+apt-get update
+apt-cache search wordpress
+apt-cache show wordpress
+apt-cache depends wordpress (check dependencies)
+apt-cache rdepends tar
+apt-get install rar
+apt-get remove rar -y (no interaction)
+apt-get purge rar (remove everything)
+apt-get -s install php (simulate the command)
+apt-get upgrade
+apt-get clean
+apt-get -d install rar (only download)
+
+apt update
+apt install php
+apt remove php -y
+apt autoremove (remove unnecessary dependencies)
+apt search word
+apt show zenity
+
+#low level command
+dpkg -I file.deb (info)
+dpkg -c file.deb (which files will be installed)
+dpkg -L php (show ist of installed files)
+dpkg -i file.deb
+dpkg -r php
+dpkg -S /bin/dd
+dpkg -P php (purge)
+dpkg-reconfigure something
+
+yum search something
+yum install something
+yum remove something
+yum check-update
+yum update something
+
+rpm2cpio (to convert rpm into cpio)
+
+zypper search something
+zypper info something
+zypper install something
+zypper remove  --clean-deps something
+zypper list-updates
+zypper update something
+
+rpm -iv --test file.rpm
+rpm -q something (search)
+rpm -ivh file.rpm
+rpm -e something
+rpm -K file.rpm (check hask of package)
+rpm --checksig file.rpm
+rpm -V bind-utils (check if there is difference between package and file)
+
+dnf is similar to yum
 ```
 
 
