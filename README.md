@@ -458,8 +458,32 @@ rpm -V bind-utils (check if there is difference between package and file)
 dnf is similar to yum
 ```
 
+File
+```
+fdisk -l (show partitions)
 
+fdisk /dev/hdd
+fdisk /dev/sda
+o (create a new table of partitions) -> n (create partition) -> p (create primary partition) -> 1 (position of partition) -> 1 (first cylinder) -> 2048M (last cylinder)
+p -> list partitions
 
+gdisk (manage gpt partitions, very similar to fdisk)
+
+parted (show first disk)
+print all (show all partitions)
+select disk
+mklabel/mktable (create table partitions)
+mkpart (create partion primary or extended. To create a logic one you need to create a extended first)
+
+mkfs -t ext3 /dev/hdd
+mkfs..hfs /dev/hdd5
+mkswap /dev/hdd2
+swapon /dev/hdd2 (mount swap partion)
+
+mke2fs /dev/sbd1 (create file system ext2 by default)
+mke2fs -t ext3 -L "label" dev/sbd2
+
+```
 
 
 
