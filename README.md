@@ -483,14 +483,17 @@ swapon /dev/hdd2 (mount swap partion)
 mke2fs /dev/sbd1 (create file system ext2 by default)
 mke2fs -t ext3 -L "label" dev/sbd2
 
+df -hT (show details of file system including space and type)
+df -ht ext4 (show only ext4)
+
+du -h (show size of hidden directories)
+du -ha (show also file sizes)
+
+fsck /ev/sda4 (does not work if it is in usage)
+fsck -t ext3 dev/sdb1 (file -s to show type)
+fsck -A (check all)
+e2fsck -y /dev/sdb2 (answer yes by default)
+
+tune2fs -l /dev/mapper/system-root
+tune2fs -m 10 /dev/mapper/system-root
 ```
-
-
-
-
-
-
-
-
-
-
