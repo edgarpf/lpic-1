@@ -366,7 +366,7 @@ vi +290 file (go to the line)
 :%s/echo/something (find and replace in all the lines)
 u works like a ctrl+z
 ```
-SWtstem architeture
+System architeture
 ```
 cat proc/cpuinfo
 lspci -k (show also modules)
