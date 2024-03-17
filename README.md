@@ -370,17 +370,24 @@ System architeture
 ```
 cat proc/cpuinfo
 lspci -k (show also modules)
-pslci -s id -v (show many details of specific resource)
-lsusb -t (show in tree format)
+lspci -s id -v (show many details of specific resource attached to pci)
+lsusb -t (show in tree format
+lsusb -d id -v (show many details of specific resource attached to usb)
+lsusb -s 01:20 (to verify which device is using the module)
 lsmod
+modprobe -r snd-hda-intel (to unload a not used module)
+modinfo -p nouveau (display all available parameters of a module)
+#the file /etc/modprobe.d/blacklist.conf can be used to block the loading of a module
 
 dmesg (to inpect system initialization process)
 
-journalctl -b (show logs of initialization)
+journalctl --list-boots (shows a list of boot numbers relative to the current boot, their identification hash and the timestamps of the first and last corresponding messages)
+journalctl -b 0 (show logs of last initialization, -1 for the previous)
 journalctl -k (show logs of kernel)
 journal -u NetworkManger.service (show logs of a service)
 
 runlevel (show the last runlevel and the current one)
+initctl list (System services can be listed with command initctl list, which also shows the current state of the services and, if available, their PID number)
 systemctl get-default
 systemctl set-default multi-user.target
 
