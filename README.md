@@ -2,6 +2,8 @@
 
 ## Exam 101
 
+#Commands
+
 To know the type of the command (internal or external)
 ```
 type cd
@@ -389,9 +391,18 @@ journal -u NetworkManger.service (show logs of a service)
 runlevel (show the last runlevel and the current one)
 initctl list (System services can be listed with command initctl list, which also shows the current state of the services and, if available, their PID number)
 systemctl get-default
-systemctl set-default multi-user.target
+systemctl set-default multi-user.target (alternates between different targets modifying the symbolic link)
+systemctl isolate multi-user.target (alternates between different targets)
+systemctl list-unit-files (lists all available units and shows if they are enabled to start when the system boots)
+systemctl suspense/hibernate
 
-shutdown
+initctl list (list system services)
+
+#Upstart
+start tty6
+stop tty6
+status tty6
+
 reboot
 telinit
 systemctl reboot
@@ -402,7 +413,7 @@ init/telinit 0 (power off)
 
 Packages
 ```
-fdisk /dev/sda (list partitioning)
+fdisk /dev/sda (list all the partitions)
 df -hT (show file system)
 pvs (show physical volumes)
 vgs (show volume groups)
@@ -469,6 +480,9 @@ File
 ```
 fdisk -l (show partitions)
 
+mount /dev/sda1 /mnt/tmp
+grub-install --boot-directory=/mnt/tmp /dev/sda
+
 fdisk /dev/hdd
 fdisk /dev/sda
 o (create a new table of partitions) -> n (create partition) -> p (create primary partition) -> 1 (position of partition) -> 1 (first cylinder) -> 2048M (last cylinder)
@@ -504,3 +518,5 @@ e2fsck -y /dev/sdb2 (answer yes by default)
 tune2fs -l /dev/mapper/system-root
 tune2fs -m 10 /dev/mapper/system-root
 ```
+#Hints
+* The root directory (/) is the first partition that has to be mounted. After that, the system will have access to the main configuration files in /etc, like, for instance, the /etc/fstab, and, with that, will obtain information about the other partitions to be mounted.
