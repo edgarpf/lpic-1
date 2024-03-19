@@ -2,7 +2,7 @@
 
 ## Exam 101
 
-#Commands
+### Commands
 
 To know the type of the command (internal or external)
 ```
@@ -518,5 +518,5 @@ e2fsck -y /dev/sdb2 (answer yes by default)
 tune2fs -l /dev/mapper/system-root
 tune2fs -m 10 /dev/mapper/system-root
 ```
-#Hints
+### Hints
 * The root directory (/) is the first partition that has to be mounted. After that, the system will have access to the main configuration files in /etc, like, for instance, the /etc/fstab, and, with that, will obtain information about the other partitions to be mounted.
