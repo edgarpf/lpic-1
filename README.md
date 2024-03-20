@@ -520,3 +520,13 @@ tune2fs -m 10 /dev/mapper/system-root
 ```
 ### Hints
 * The root directory (/) is the first partition that has to be mounted. After that, the system will have access to the main configuration files in /etc, like, for instance, the /etc/fstab, and, with that, will obtain information about the other partitions to be mounted.
+* The commands “man” and “info” will show, in most of the cases, a whole manual about each command. “whatis” will bring a brief definition about the tool function.
+* The command dmesg has as an output a register of the logs in the system boot, the same information can be found in the file /var/log/dmesg, however, not all distributions currently include this file. In the journalctl, the -k options shows all the kernel messages from the current boot, the -b option can also be used but contains all messages, not only kernel related.
+* “wall” will send the message that follows the command directly to the terminal where all the users are connected.
+* The /usr/share contains many system files, including the documentation pages in /usr/share/doc and the manuals in /usr/share/man.
+* System V, or SysV, is the init that was originally used in Linux environments, inherited from Unix. Currently most distributions use the systemd and some use Upstart. Anacron is a process scheduling tool.
+* The commands :wq, :x and ZZ will save the document in vim and leave.
+* It’s important to remember that a partition with ID 82 (0x82) will be assigned to the swap area, while partitions with ID 83 (0x83), Linux Native, will be used to Linux files. The swap area of a system can be composed of several partitions.
+* The GRUB settings must be made in /etc/default/grub, after using update-grub or grub-mkconfig is when the file /boot/grub/grub.cfg will be updated. The file menu.lst is used for GRUB Legacy, not for GRUB2.
+* If there’s no specified parameter, split command will split a file in other files with 1000 lines each. The -l option can be used to set the desired number of lines and the -b option to set in bytes.
+* The ldd command followed by the application's name will show the dynamic libraries used by the application.
