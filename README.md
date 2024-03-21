@@ -530,3 +530,38 @@ tune2fs -m 10 /dev/mapper/system-root
 * The GRUB settings must be made in /etc/default/grub, after using update-grub or grub-mkconfig is when the file /boot/grub/grub.cfg will be updated. The file menu.lst is used for GRUB Legacy, not for GRUB2.
 * If there’s no specified parameter, split command will split a file in other files with 1000 lines each. The -l option can be used to set the desired number of lines and the -b option to set in bytes.
 * The ldd command followed by the application's name will show the dynamic libraries used by the application.
+* The file /etc/apt/sources.list contains a list of URLs and parameters used by the APT commands to check and download the new packages.
+* The command dpkg-reconfigure can be used to reconfigure a package already installed.
+* xfs_repair repairs corrupt or damaged XFS filesystems.
+* The MBR area is located in the first sector of the bootable disk, contains the information for loading the bootloader (GRUB) and the system partition table. MBR loads and runs GRUB.
+* The -r option of the shutdown command can be used to reboot the system, as well as the reboot command. Telinit 6 invokes runlevel 6 which is related to rebooting the system.
+* Some directories can not be mounted on partitions other than the / partition. The / partition is the first to be mounted, and after that, configuration files and tools will be used to finalize the system boot, including mounting other partitions, if these files are on different partitions, they will not be accessible. The directories that should be on the same partition are /etc, /sbin, /bin, /lib, /media, /mnt, /proc, /sys, /dev.
+* The grub-install command will install the GRUB files on the indicated device, by default in the /boot directory.
+* "dpkg -s", "apt-cache show" and "apt show" will return various information from a package installed on the system.
+* The command "yum install --downloadonly " will only download an rpm package from the configured repositories, but will not install it.
+* Zypper is the rpm package manager used in OpenSuse systems. The options are similar to yum, but not the same. In general there is a long option, for example "zypper install ksh" or short, "zypper in ksh".
+* In the rpm command, used for direct installation of .rpm packages, the -U option can be used to install or update a package that already exists. The rpm -i option will only perform a fresh install, but will not update a package that is already installed. The --force option forces the installation of a package.
+* The command env show only the exported variables, while the comand set shows even local variables.
+* type command is used for displaying information about command type. It displays if command is an alias, shell function, shell builtin, disk file, shell reserved word or if the command is hashed in cache.
+* The command "uniq -d" shows only the duplicate lines as long as the file is sorted.
+* The -p option in the mkdir causes the entire tree to be created.
+* 0 is the standard input descriptor (stdin), 1 is the standard output descriptor (stdout) and 2 is the output error (stderr).
+* The function of the tee command is to receive an input, usually the output of another command with the use of |, display this input on the screen and at the same time write it to a file.
+* The pkill and killall commands use the name of the process as an argument, pkill allows several other variables such as the user name of the process owner, for example. The kill uses the PID as argument, pgrep only shows the PID of a process.
+* The watch command can be used with any command, so that it is replayed constantly, the default time is 2 seconds, but the -n option allows you to set the update time.
+* Without any parameter, kill sends the SIGTERM signal, code 15, this signal kills the process in a soft way, giving the process time to complete its tasks.
+* The jobs command shows all processes (or set of them) started in the background, using & in the current session.
+* The “nice” of a process can be configured with values ranging from -20 to 19, where -20 increases the priority to the maximum, and 19 decreases to the maximum.
+* In grep, the -c option counts the occurrences of the string, in how many lines the string appeared. The -l shows the files that have a certain string. fgrep is a grep that does not accept any type of regular expression. Egrep is a grep that accepts extended regular expressions but the -n option would only include a number in the rows of the result.
+* 21dd removes the current line and the next 20 lines in vim.
+* The df command is used to check the use of a partition, usually shows the disk space, but with the -i option it displays the use of inodes.
+* Mount is the command used to manually mount a partition to a directory.
+* The chgrp command is specific for group definition with the syntax: chgrp . The chown command can be used to set the user owner and the group, accepting the following syntaxes: chown : ou chown . , where the can be ommited.
+* Permissions are set by subtracting the umask value from value 666 for files and 777 for directories. Thus, the value 0002, which may also appear as 002, will be 666 - 002 = 664 (rw-rw-r--).
+* ln file1 file2 create a hard link to file1, called file2.
+* Whenever a file has the letter "l" at the beginning of its permissions, followed by 777 permissions, it is an indicator of being a symbolic link.
+* Which searches for files only in the directories included in the PATH.
+* The hypervisor is a required layer between the Infrastructure (aka Host) and the Virtual Machine itself, or Guest. The hypervisor controls and manages the access of virtual machines to the hardware elements of the infrastructure.
+* Btrfs natively supports features like subvolumes, snapshots, multi-devices/RAID and transparent data compression.
+* fdisk and parted can create GPT and MBR partitions. gdisk is specific to the GPT type.
+
