@@ -564,4 +564,56 @@ tune2fs -m 10 /dev/mapper/system-root
 * The hypervisor is a required layer between the Infrastructure (aka Host) and the Virtual Machine itself, or Guest. The hypervisor controls and manages the access of virtual machines to the hardware elements of the infrastructure.
 * Btrfs natively supports features like subvolumes, snapshots, multi-devices/RAID and transparent data compression.
 * fdisk and parted can create GPT and MBR partitions. gdisk is specific to the GPT type.
-
+* SATA storage devices follow the same standard as SCSI disks, that is, /dev/sdX. ATA/IDE disks use the /dev/hdX standard.
+* IRQ stands for Interrut Request Line, or Interrupt Request. This information is recorded in the /proc/interrupts dynamic file.
+* After the boot process, the kernel invokes the /sbin/init process as the first system process, and it starts the other processes, so all other processes are children of the init process.
+* POST (Power-On Self-Test) is a BIOS procedure that checks if all devices are ready for use. The MBR (Master Boot Record) is the disk area that contains the information that will be used during the boot processs, GRUB is a boot manager and UEFI is a new firwmware being used in BIOS's place in modern systems
+* The kernel supports a series of parameters that can be used at startup, such as quiet enable silent mode, not displaying startup and error messages. Other options are mem (maximum amount of RAM), ro (read only), splash (splash screen), among others.
+* In systemctl, the isolate option is used to switch between execute modes, or target (runlevels in SysV). For recovery mode (or single mode) the targets rescue.target or runlevel1.target are used.
+* Runlevel 0 is related to system shutdown and runlevel 6 to system reboot, so using 0 or 6 would make it impossible to boot the system.
+* The /etc/inittab file shows the init process which is the default runlevel, by the parameter "initdefault", and with that, which services should be started by the system.
+* In MBR partitioning, there is a limit of 4 primary partitions or 3 primary partitions and 1 extended partitions in which the logical partitions will be associated.
+* The LVM (Logical Volume Manager) has 5 main elements: VG (Volume Group), PV (Physical Volume), LV (Logical Volume), PE (Physical Extent) and LE (Logical Extent).
+* As the question mentions the file menu.lst, we are talking about the Legacy GRUB and in that standard hd0,3 indicates the fourth partition (since the count starts from 0) of the first disk. If it were GRUB2, hd0,3 would be the third partition of the first disk, ie / dev / hda3.
+* GRUB_DEFAULT = X indicates which system should be started by default. GRUB_TIMEOUT indicates the timeout before booting the kernel.
+* The ldconfig command updates the /etc/ld.so.cache file.
+*  apt-cache depends shows the dependencies of a package
+*  The dpkg command is used to install/update/remove packages directly, the -i option does the installation procedure.
+*  n the rpm command you must first enter the operating mode parameter, in this case the mode is the query, represented by -q, after that the option "f" receives a file as parameter and rpm identifies the package related to it.
+*  The -V or -verify option of rpm checks the integrity of a package.
+*  The data about the repositories used by the package manager are in the files in the /etc/yum.repos.d/ directory. /etc/yum.conf refers to general YUM settings.
+*  The export command causes a variable to become global, so that all child processes can work with the contents of this variable.
+*  By default Linux, the .bash_history file in the user's $ HOME will contain the command execution history, being updated at the end of each user session.
+*  The uname command provides various system information, including the kernel-release, by the -r option.
+*  Since the directory is not in the PATH, the form "report.sh" can not be used, the ./report.sh should be used. Another way is to use the script as the command shell/bash shell (or sh, or ksh, etc).
+*  The touch command can be used to create a file without any content and also to change the dates of access and modification of a file.
+*  The most common use of the dd command is to create an image from a partition, and vice versa, in that way the syntax uses if= to inform the source and of= to inform the destination.
+*  In the tar command, the "t" option displays the contents of the grouped/compressed file, the -f should always be used to indicate the .tar or .tgz file.
+* The rm command with the -r option removes a directory recursively, that is, removes the directory and everything inside. rmdir is only used to remove empty directories.
+* The tee command must be used to display an output on the screen while writing to a file, but by default the tee overwrites the file if it already exists, the -a option causes the tee to append to the file, including output at the end, without deleting the previous content.
+* SIGHUP can cause a process to die, to be restarted, or to reread its configuration files, with 1 being its numeric code. 9 is the code for SIGKILL, 10 for SIGUSR1 and 15 for SIGTERM.
+* In the shell, by default every command will be started in foreground mode, to force initialization as background, that is, unlinked from the shell, the & symbol at the end of the command should be used.
+* The command ps with option "a" shows the processes of other users but linked to the current terminal. The "u" option enables the user format, displaying the user name of each process as well as other details of the process. The "x" option shows the processes of all terminals, as well as processes that are not associated with any terminal.
+* In general, load average allows you to check how the execution of processes on a system is. This value can be viewed by the uptime and top commands.
+* When using the nice command to start a process, by default the value 10 is assigned to it, that is, the priority is reduced. When a process is started without using nice, the assumed NICE value is 0.
+* The renice and top commands can be used to change the NICE value of a process that is already running. The nice command is used to set the value when starting a process.
+* In grep/egrep/fgrep, the -v option has the effect of not displaying the string or results of the expression used.
+* The -c option in grep/egrep counts the number of rows in which the string/expression is found.
+* The EDITOR environment variable can be used to define the default text editor in the shell.
+* The "a" option enters edit mode one character after the current cursor position. The "i" option enters edit mode exactly at the current cursor position. The "o" option enters edit mode on the line below the current cursor position.
+* Both fdisk and parted have the -l option to display the system partitions. The information is also always present in the /proc/partitions file.
+* The journaling feature was implemented in the ext3 filesystem, the only difference being with ext2.
+* The du command can be used to recursively check the disk space usage of files and directories. Df is used to show the use of system partitions.
+* The difference from ext3 to ext2 is the journaling feature, so the tune2fs command, with the -j option, to turn a device into ext3.
+* The -a option of the mount command will mount all partitions listed in /etc/fstab, except entries containing the "noauto" option. Without any option, mount only displays the currently mounted partitions.
+* The first line information of /etc/fstab should be the device name (device, UUID or Label), the second should be the directory to be mounted.
+* The partition must be unmounted so that the fsck command is used and the partition is checked. For this the first command to be executed must be the umount.
+* Permissions are set by subtracting the umask value from value 666 for files and 777 for directories. Thus, the value 022, which can also appear as 0022, will be 777 - 022 = 755 (rwxr-xr-x)).
+* The best example of the Sticky bit is the /tmp directory, the /tmp permission is drwxrwxrwt, any user can create a file in /tmp, but only the one who created the file can remove it or change it.
+* Chown can be used to define the user and the owner group, accepting the following syntax: chown : ou chown . .
+* A physical link can be seen as a new file that points to the same volume of data, they are different files that use the same inode. In the hard link, the destination file and the link must be in the same partition (this is not mandatory in the symbolic link). Because the permissions settings are configured in inode, and the two files share the same inode, the two files share the same access permissions.
+* The -s option of the ln command specifies the creation of a symbolic link and the main form of use is: ln –s
+* The locate command uses an internal Linux base that contains the location of all system files, allowing a quick response to the command, however that base needs to be updated by the updatedb command, usually executed at system startup, or regularly by scheduling.
+* The Guest/Device Drivers are installed on the Hosts Operating Systems of the virtual machines to improve their performance and usability.
+* The md5sum, sha256sum and sha512sum commands are used to generate, based on different algorithms, a set of characters representing a particular file, in order to enable them to be checked later.
+* 
