@@ -616,4 +616,25 @@ tune2fs -m 10 /dev/mapper/system-root
 * The locate command uses an internal Linux base that contains the location of all system files, allowing a quick response to the command, however that base needs to be updated by the updatedb command, usually executed at system startup, or regularly by scheduling.
 * The Guest/Device Drivers are installed on the Hosts Operating Systems of the virtual machines to improve their performance and usability.
 * The md5sum, sha256sum and sha512sum commands are used to generate, based on different algorithms, a set of characters representing a particular file, in order to enable them to be checked later.
+* The modprobe command is used to load and remove modules from the system.
+* Bootloader is the process who is responsible for selecting and running the kernel and initrd during the boot process?
+* The shutdown command can be used both to shut down and to restart the system, with the use of the -r option, with the advantage of the possibility of scheduling.
+* Modern computers support the Advanced Configuration and Power Interface, which enables intelligent power management in your system and queries battery status and configuration. The acpid daemon monitors these events by taking actions related to their internal rules and settings.
+* systemctl status https.service
+* MBR partitioning allows a maximum of 4 primary partitions, or 3 primary partitions and 1 primary partition. In the extended partition, the logical partitions are associated. Primary or extended partitions are numbered from 1 to 4, logical partitions are numbered from 5.
+* Systems that use UEFI as firmare have a special partition called ESP (EFI System Partition), which is mounted in the /boot/efi/ directory.
+* The grub.cfg file is used by GRUB2, so the parameter that indicates the kernel is "linux".
+* LD_LIBRARY_PATH can be configured to temporarily set the location of a library on the system.
+* With "dpkg -S" (or --search) it is possible to inform a file and identify the package "owner" of this file.
+* The apt-get/apt "upgrade" option will update all packages on the system.
+* In the rpm command the -e or --erase options can be used to remove a package. In the yum the "erase" and "remove" options can be used for the same function.
+* In DNF and YUM, the "update" option updates one or all of the packages on the system, the "upgrade" option does the same as "update" but considers the packages obsolete, removing them if necessary.
+* In the rpm command the -q option enables the "query" mode and the "l" option allows to inform a package and to return all packages installed by it.
+* By typing $$ the user receives the PID (Process ID) of the current shell. $! is the PID of the last process in the backgroud (job) run. $? is the exit code of the last executed command.
+* The HISTFILE environment variable stores the path and file name that will store the command history, by default /home/.
+* There are some options to repeat previous commands, among them !! executes the last command used.
+* In sed, the statement must be enclosed in single quotation marks. Another importan point is the "g", of global, at the end of the expression, without it only the first occurrence of each line would be replaced, not all occurrences.
+* In the "ls" command, the "a" option displays the hidden files, the "l" shows the details, the "t" command so that the older files appear at the end of the command and the "r" reverses the file, making the newer files appear at the end of the listing.
+* The "file" command can be used to determine the type of a file.
+* The find has 3 types of time search: ctime (change time) = last change of content and/or properties (permissions, etc), mtime (modification time) = last change of content, atime (access time) = last time the file has been accessed.
 * 
