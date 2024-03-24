@@ -637,4 +637,24 @@ tune2fs -m 10 /dev/mapper/system-root
 * In the "ls" command, the "a" option displays the hidden files, the "l" shows the details, the "t" command so that the older files appear at the end of the command and the "r" reverses the file, making the newer files appear at the end of the listing.
 * The "file" command can be used to determine the type of a file.
 * The find has 3 types of time search: ctime (change time) = last change of content and/or properties (permissions, etc), mtime (modification time) = last change of content, atime (access time) = last time the file has been accessed.
-* 
+* Signal 2, or SIGINT, is associated with Ctrl C, and stops executing a process.
+* With nohup, a process in general runs as follows: nohup &. That way it starts in the background and will continue to run even if bash is closed.
+* The pstree command displays the processes hierarchically, the -p option displays the PID of each process.
+* If you used nice -8 command, the nice value associated with the command would be 8.
+* Nice values range from -20 to 19, where -20 gives the highest priority and 19 the lowest priority.
+* The fgrep command only filters for text strings, but does not interpret regular expressions.
+* The ? does the search from the end to the beginning, the / does the search from beginning to end.
+* By pressing yy the current line is copied, to copy the current line and more 9 can be used y10y or 10yy.
+* O :! followed by a command will execute this command, show the result and return to the same point of the text.
+* After defining the partition, you still need to format it with the mkswap command so that after that it can be included in the swap area with the swapon command.
+* After defining a partition, using fdsisk, parted or gdisk, the partition must be formatted, that is, the file system must be created, for that the main command is mkfs or mkfs.type, mke2fs is used for filesystems ext2/3/4.
+* In addition to the device name, the partition can be informed by the Universally Unique Identifier (UUID), as the name says, a unique identifier defined for each system partition, or even by the Label, defined by the user at the time of partition creation.
+* The "noauto" option says that the partition should always be mounted manually, "auto" has the opposite effect. "ro" sets the partition to read-only, umount is not a valid option.
+* The SGID is represented by replacing the "x" with the "s" in the group permissions.
+* When using o-rx in chmod, the administrator is removing the permissions r and x from the others level.
+* A symbolic link is nothing more than a pointer to another file, so its content is just the way to its destination.
+* The /sbin and /usr/sbin directories have programs used in system administration, only by the root user, such as fsck, mkfs, repquota, and so on.
+* The BIOS/UEFI firmware contains the device boot order to be used.
+* n the sed command the -i option causes the source file to be changed. O /d indicates that any line containing the string will be removed.
+* xfs_fsr (from FileSystem Reorganizer), has the function of improving the organization of the XFS file system.
+* The lsblk commands, with the -f, and blkid option, will display all partitions and their respective UUID, Label, and various other information.
