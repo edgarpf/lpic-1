@@ -658,3 +658,32 @@ tune2fs -m 10 /dev/mapper/system-root
 * n the sed command the -i option causes the source file to be changed. O /d indicates that any line containing the string will be removed.
 * xfs_fsr (from FileSystem Reorganizer), has the function of improving the organization of the XFS file system.
 * The lsblk commands, with the -f, and blkid option, will display all partitions and their respective UUID, Label, and various other information.
+* The /bin/sh file on Linux now typically points to a shell program
+* The uname -r command will display only the current Linux kernel version (revision).
+* The echo \^New \^Style command will display ^New ^Style, because the backslash is a form of shell quoting that protects a single character after it. 
+* The which fortytwo.sh command will search the directories listed in the $PATH environment variable for the fortytwo.sh program. If it is found, it will display the program’s absolute directory reference.
+* The three modes of the vim editor are command (also called normal mode), insert (also called edit or entry mode), and ex (sometimes called colon commands) mode.
+* Delimiter is one or more characters that create a boundary between different data items in a record.
+* (lasting | final) is Extended Regular Expession (ERE) not a BRE.
+* A file descriptor is a number that represents a process’s open files.
+* By default, STDOUT goes to your current terminal, which is represented by the /dev/tty file.
+* sort SpaceOpera.txt 2> /dev/null put the error message in the black hole.
+* A systems package manager database typically contains information on application files as well as their directory locations, software versions, and any library
+dependencies.
+* The CentOS Linux distribution uses the Red Hat package management system, which uses .rpm files.
+* The yum and dnf programs are used to install .rpm packages from Red Hat–based repositories.
+* /etc/yum.repos.d/ is the path to add a third-party repository to his Red Hat–based package management system.
+* Both the rpm2cpio and cpio utilities are needed to extract the files from an .rpm package file.
+* To list currently installed packages with missing dependencies, you should issue the apt-cache unmet command.
+* You can reconfigure a package via the dpkg-reconfigure utility.
+* You should use the ldconfig command to update the system’s library cache.
+* The /etc/ld.so.conf.d/ directory, LD_LIBRARY_PATH environment variable, and the /lib* and /usr/lib*/ folders are all potential locations where library file
+locations may be stored.
+* The GNU ps command in Linux supports parameters that were supported by the legacy BSD and Unix ps command, along with new options created by GNU.
+* With no command-line options, the GNU ps command displays only processes run by the current shell.
+* The top command displays the currently running processes on the system and updates every 3 seconds.
+* The top S command displays the processes based on the cumulative CPU time for each process.
+* The GNU Screen utility employs the screen commands, and the screen -ls command will display any detached windows belonging to Natasha along with their window IDs.
+* Use the jobs -l command to see all his current background jobs.
+* The kill command allows you to stop an application that’s already running by specifying its process ID.
+* 
