@@ -686,4 +686,23 @@ locations may be stored.
 * The GNU Screen utility employs the screen commands, and the screen -ls command will display any detached windows belonging to Natasha along with their window IDs.
 * Use the jobs -l command to see all his current background jobs.
 * The kill command allows you to stop an application that’s already running by specifying its process ID.
+* The workstation firmware looks for the boot loader program to load an operating system.
+* The workstation firmware looks at the first sector of the first hard drive to load the boot loader program. This is called the MBR (master boot record).
+* The BIOS firmware can look in multiple locations for a boot loader program.
+* The master boot record (MBR) is located in only one place: on the first sector of the first hard drive on the workstation.
+* The ESP is stored in the /boot/efi directory on Linux systems.
+* The UEFI firmware method has replaced the BIOS in most IBM-compatible computers.
+* The solid-state drive (SSD) storage device uses an integrated circuit to store data.
+* Linux creates files named sdx in the /dev directory for SCSI devices. For the second SCSI device, Linux would create the file /dev/sdb.
+* The lvcreate program creates a logical volume from multiple partitions that you can use as a single logical device to build a file system and mount it to the virtual directory.
+* The GNU gparted program provides a graphical window for managing device partitions.
+* The fdisk -p command displays the current partition table for the hard drive,
+* Linux uses mount points to insert a filesystem on a storage device to the virtual directory.
+* The ext filesystem was the original filesystem used in Linux, and ext4 is the latest version of it.
+* The mkfs program allows you to create a new filesystem on a partition.
+* The swap filesystem type creates a virtual memory swap area for the Linux kernel to use to create virtual memory.
+* The mount program allows you to insert the filesystem on a partition into the virtual directory.
+* The umount command allows you to specify either the partition or the location in the virtual directory to remove from the virtual directory.
+* The fsck program repairs corrupted filesystems.
+* The du command displays the disk usage by directory, allowing you to easily check the HOME directories of all user accounts and determine which user has the most disk space.
 * 
