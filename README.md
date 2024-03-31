@@ -705,4 +705,17 @@ locations may be stored.
 * The umount command allows you to specify either the partition or the location in the virtual directory to remove from the virtual directory.
 * The fsck program repairs corrupted filesystems.
 * The du command displays the disk usage by directory, allowing you to easily check the HOME directories of all user accounts and determine which user has the most disk space.
+* When choosing a filename to create on a Linux system, shell metacharacters such as an asterisk (*) and an ampersand (&), as well as spaces, should be avoided.
+* ls -F will append an indicator code of / to every directory name.
+* The -d switch on the ls command will allow you to view a directory file’s metadata instead of seeing metadata for the files that exist within that directory.
+* The rm -rI command will recursively delete the files in the /home/Zoe directory tree, and it will ask before it starts.
+* The tar options -cJvf will create a tarball using the highest compression utility, xz, and allow the administrator to view the files via the verbose option while they are being copied into the compressed archive.
+* The hard links will prevent other command-line interface users from accidentally deleting the data.
+* The chown command allows you to set both the owner and group assigned to a file.
+* By default, directories are created with octal mode 777, which gives them a permission string of rwxrwxrwx. The umask setting takes away permissions. Its first number is for special permissions (SUID, SGID, and sticky bit). Its next three numbers correspond to the standard permission categories—owner, group, and other. Thus, to end up with a directory that has a permission string of rwxrwxrw (776), umask needs to be set to 0001.
+* The Set User ID bit (SUID) allows all users to run applications as the root user account.
+* The sticky bit assigned to a directory restricts all of the files in that directory so that only the file owner can delete the file, even if a user account is in the group that has write permissions.
+* By default, the locate command uses file globbing, which adds wildcards to the pattern you enter.
+* The find / -nouser command will search through the entire virtual directory structure looking for any files that do not have a username associated with them.
+* The whereis command displays a command’s program binaries, manual pages, as well as source code files.
 * 
