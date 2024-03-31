@@ -718,4 +718,21 @@ locations may be stored.
 * By default, the locate command uses file globbing, which adds wildcards to the pattern you enter.
 * The find / -nouser command will search through the entire virtual directory structure looking for any files that do not have a username associated with them.
 * The whereis command displays a command’s program binaries, manual pages, as well as source code files.
-* 
+* The kernel ring buffer is an area in memory reserved for storing output messages as the Linux system boots.
+* A system’s firmware looks for the boot loader program in order to load an operating system.
+* The BIOS firmware looks at the first sector of the first hard drive to load the boot loader program. This is called the master boot record.
+* The ESP is stored in the /boot/efi/ directory on Linux systems.
+* The UEFI specification doesn’t require a specific extension for UEFI bootloader files. However, it has become somewhat common in Linux to use the .efi file extension to
+identify them.
+* The GRUB Legacy configuration files are stored in the /boot/grub directory.
+* For GRUB Legacy the configuration line he should change will start with the title word. This line sets the boot menu choice displayed.
+* The grub-install command installs GRUB Legacy into MBR.
+* The set root=(hd1,2) line properly specifies in a GRUB2 configuration that the root partition, the /boot directory, is on /dev/sdb2.
+* To enable kernel debugging, after Rey reaches the GRUB2 boot menu, she should edit the appropriate boot menu entry, find the line starting with linux*, go to the end of the line, add a space, and then type debug to pass the kernel parameter, which will start debugging mode. Finally, she needs to press Ctrl+X to start booting the system with the modified entry.
+* Any modified systemd service unit configuration file should be stored in the /etc/systemd/system/ directory.
+* The best command to make the modified file take immediate effect for the openSSH service is systemctl reload.
+* To change the system’s default target, you need to employ the systemctl set-default command, passing the target name as an argument and using super user privileges.
+* Debian-based Linux distributions that use SysVinit use only runlevels from 0 through 2. The runlevel command shows the previous runlevel, or N for newly booted.
+* For SysVinit systems, the default runlevel is stored within the /etc/inittab file within the initdefault record.
+* The wall command will only send a message to users who are currently logged into the system, using a tty terminal or terminal emulator, and have their message status set to “yes.” The who -T command fits the need, because it will display all the currently logged-in users and their terminal ID as well as provide a + by their username if their message status is set to yes.
+* The new cloned VMs should have their NIC MAC address, host name, and machine ID check and modified if necessary, in order for them to be able to run together on the same local network segment.
