@@ -736,3 +736,39 @@ identify them.
 * For SysVinit systems, the default runlevel is stored within the /etc/inittab file within the initdefault record.
 * The wall command will only send a message to users who are currently logged into the system, using a tty terminal or terminal emulator, and have their message status set to “yes.” The who -T command fits the need, because it will display all the currently logged-in users and their terminal ID as well as provide a + by their username if their message status is set to yes.
 * The new cloned VMs should have their NIC MAC address, host name, and machine ID check and modified if necessary, in order for them to be able to run together on the same local network segment.
+* The /proc/interrupts file in a Linux system contains information about the IRQs (Interrupt Requests) used by different devices. This can be useful for identifying any hardware interrupt conflicts which might be causing system issues.
+* If an integrated peripheral, like a webcam, works in one operating system but not another, a common reason is that it has been disabled in the BIOS/UEFI settings.
+* The r command in gdisk is used to enter the recovery & transformation options, which includes the capability to convert an MBR partition table to GPT.
+* The /sys/devices/ directory contains a representation of the device hierarchy. For each device, there's a driver symlink pointing to the driver that manages the device, helping you determine which driver is associated with a specific device.
+* The mkswap command sets up a Linux swap area on a device or in a file. The -L option is used to assign a label to the swap partition, which can be helpful for identifying it later.
+* The /sys/bus/pci/devices/ directory contains information about all PCI devices detected by the Linux kernel.
+* Using the NVMe SSD for the root file system and swap takes advantage of its faster speeds, resulting in swift system operations and better virtual memory performance. Placing /home on the SATA SSD provides ample space for personal files and development projects.
+* For a media streaming server, performance is crucial. The RAID 0 configuration will stripe the data across both HDDs, offering faster read/write speeds which is beneficial for streaming. The SSD provides quick boot times and efficient system operations.
+* To unload (or remove) a module from the Linux kernel, the modprobe command with the -r option is used followed by the module name.
+* The most effective way to disable an integrated peripheral like an onboard sound card is to access the system's BIOS/UEFI settings during the boot process and disable it there.
+* The mkfs.ext4 command is used to create an ext4 filesystem. The device name /dev/sdb1 points to the USB flash drive partition she wants to format.
+* In Linux, serial ports are typically represented as /dev/ttySX, where X is a number starting from 0. Therefore, the first serial port is usually /dev/ttyS0.
+* The udevadm utility allows administrators to interact with udev to query device information, trigger events, and bind or unbind drivers, making it an essential tool when working with dynamic device nodes, including USB devices.
+* MBR (Master Boot Record) has a limitation where it can only support drives up to 2TB in size. For drives larger than 2TB, GPT (GUID Partition Table) should be used because it doesn't have the same size restrictions as MBR.
+* When hosting a database, the logs and data will often be located in /var. Having /var on the larger HDD will ensure sufficient space for the database while also leveraging the faster I/O operations of the SSD for the root filesystem and swap space.
+* n the Linux system, the primary partitions on SATA, SCSI, and NVMe drives are represented in the /dev/ directory with the naming convention /dev/sdXN, where X is a letter representing the drive (starting with 'a' for the first drive) and N is a number representing the partition. Thus, the first partition on the primary drive is /dev/sda1.
+* The /proc/cmdline file contains the kernel command line parameters that were passed during the system's boot process. By examining this file, administrators can determine specific boot arguments and settings that were applied.
+* For UEFI systems, the /boot partition (or EFI System Partition, ESP) must be formatted with the FAT32 filesystem for compatibility reasons. Typically, 500MB is sufficient for this partition.
+* LVM (Logical Volume Management) provides flexibility in storage management. Logical volumes, which are similar to partitions in a non-LVM system, can be easily resized, even while they are in use.
+* The mkfs command with the -t option followed by the filesystem type (in this case, ext4) and the partition path will create a filesystem of the specified type on the given partition.
+* The modprobe command is used to load a module into the Linux kernel. Simply specifying the module name as an argument (like modprobe my_eth) is sufficient to load that module.
+* To run commands that are outside the defined PATH, the full path to the command has to be specified.
+* usbreset is a utility that allows users to reset the USB device programmatically. This can be helpful when a USB device is not functioning as expected, and a quick reset might solve the issue without physically interacting with the device.
+* The set command, when used without any options, displays all shell variables (both environment variables and shell local variables) and functions for the current session.
+* LVM's snapshot feature allows for the creation of a new logical volume which represents a frozen state of the original volume at a particular point in time. This snapshot can be used for backup purposes.
+* udev is a device manager for the Linux kernel. It manages device nodes in the /dev directory and listens to the sysfs filesystem to detect devices as they are plugged into the system.
+* To define an environment variable and make it available for child processes, one should use the export command.
+* The history command displays the command history. By piping its output to tail -5, Sarah can view the last 5 commands she executed.
+* The command parted /dev/sda print will display the partition layout of the /dev/sda disk. While parted does provide sizes in a human-readable format by default, it doesn't require a specific flag for that purpose.
+* The /sys directory, known as sysfs, is a pseudo filesystem provided by the Linux kernel that exports information about various kernel subsystems, devices, and associated device drivers from the kernel's device model to userspace.
+* The bash --version command is used to display the version information for the Bash shell.
+* The ping command is used to send ICMP echo requests to network hosts. The -c option specifies the number of packets to send.
+* In the fdisk utility, the n command is used to create a new partition.
+* The env command allows setting environment variables for the duration of a command. By using env PATH=/opt/python3.8/bin/ python script.py, Maria can ensure that the script.py runs with the Python version in /opt/python3.8/bin/.
+* The /proc/meminfo file provides detailed statistics about the system's memory usage, including total memory, free memory, used memory, swap statistics, and more.
+* The correct command to create a multi-device Btrfs filesystem is mkfs.btrfs. The -d raid0 option specifies that data should be striped across the two devices using RAID 0.
