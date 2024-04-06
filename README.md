@@ -772,3 +772,36 @@ identify them.
 * The env command allows setting environment variables for the duration of a command. By using env PATH=/opt/python3.8/bin/ python script.py, Maria can ensure that the script.py runs with the Python version in /opt/python3.8/bin/.
 * The /proc/meminfo file provides detailed statistics about the system's memory usage, including total memory, free memory, used memory, swap statistics, and more.
 * The correct command to create a multi-device Btrfs filesystem is mkfs.btrfs. The -d raid0 option specifies that data should be striped across the two devices using RAID 0.
+* The journalctl -b -p err command shows all error priority messages (and more severe) since the last boot, making it a direct way to filter out warnings or errors from the boot logs when using systemd.
+* The fsck.ext4 command is specifically designed to check ext4 filesystems. The -c option will check for bad sectors, which can be beneficial after a power outage to verify the integrity of the filesystem.
+* The /home directory is traditionally used for user-specific data, including personal files and configuration files. By creating a separate partition for /home, you can ensure that large files stored in user directories won't impact the root or other critical system directories.
+* The history command in Linux is used to display the command history list. By providing a number as an argument, like history 5, it will display the last 5 commands executed.
+* Single quotes (') prevent variable expansion in the shell. So, when Simon uses single quotes around the string, the variable $USER will not be expanded, and the output will be exactly $USER is logged in.
+* In many Linux systems, the primary disk is often labeled as sda. By grepping for "sda" in dmesg output, one can retrieve kernel messages related to this specific disk, making the investigation more targeted.
+* While Linux natively uses ext4 and other filesystem types, NTFS is a widely-supported filesystem due to its use in Windows environments. Linux can read and write to NTFS partitions, making it a good choice for shared partitions on dual-boot systems where the other OS is Windows.
+* The unset command is used to remove variables or functions from the shell environment.
+* The du -sh /data command displays the total disk usage of the /data directory in a human-readable format (like K, M, G) and suppresses the display of individual disk usage for its subdirectories.
+* The /boot filesystem is specifically designed to store the bootloader, kernel, and related files necessary for the system to boot.
+* e2fsck uses five passes to check and potentially repair ext2, ext3, and ext4 filesystems. Each pass has a specific function ranging from checking blocks and sizes to checking for reference counts.
+* The fsck -a /dev/sda2 command will attempt to automatically repair the filesystem without manual intervention. This is useful when you expect minor errors and want them fixed without being prompted.
+* The manufacturer's logo is typically displayed by the BIOS or UEFI. If the system does not progress to the OS selection screen or show the boot loader's interface, then it's likely that the Boot Loader is malfunctioning or not properly installed.
+* The journalctl -b command is used to show journal entries for the current boot. It provides a way for administrators to quickly view messages and logs related to the latest boot process, making it easier to diagnose recent issues.
+* To determine the version of Upstart that is currently installed on a system, you can use the initctl --version command.
+* One of the primary advantages of systemd over SysVinit is its ability to start services concurrently, thereby potentially speeding up the boot process.
+* The uname command is used to display system information in Linux. The -v option specifically shows the version of the kernel, including the date and time when it was built.
+* The initctl list command is used within the Upstart system to provide a list of jobs and their current states
+* The which command is used to show the full path of shell commands, allowing users to determine which executable would be run when entered on the command line. If grep is an alias or a function, which won't return its path.
+* The type command is used to describe how a command name is interpreted in the shell. It will indicate if a command is a shell built-in, an alias, or an external command, among other possibilities.
+* Using journalctl -u sshd allows the administrator to filter the journal logs for messages from the sshd service unit. This provides a focused view of logs related to the SSH daemon.
+* The boot process starts with the BIOS (or UEFI on newer systems), which initializes the system hardware and then hands over control to the Boot Loader. The Boot Loader, in turn, loads the Kernel. The Kernel, once loaded, starts the Init Process (or its modern equivalents like systemd or Upstart), which subsequently starts the System Services and completes the boot process.
+* The -E option allows specifying extended options. The resize=1 option ensures that the filesystem is created with resize inodes, facilitating easy future resizing.
+* The EFI System Partition (ESP) is a dedicated partition on UEFI-based systems that holds the UEFI bootloader, drivers, and other bootable images. It's essential for the booting process when the system is set to UEFI mode.
+* Traditionally, a common recommendation was to set the swap space to be twice the size of RAM.
+* The journalctl -b command displays all journal entries collected since the last boot, providing a comprehensive log of everything that happened during the boot process, especially when using systemd.
+* The EFI System Partition (ESP) needs to be formatted with the FAT32 filesystem when setting up for UEFI boot.
+* The df -i command displays the inode usage of all mounted filesystems. It shows the total number of inodes, used inodes, free inodes, and the percentage of inodes used.
+* By creating a separate partition for /var and mounting it at the /var mount point, you ensure that if /var fills up due to logs or other data, it won't consume space on the root filesystem, thereby preventing potential system issues.
+* The .bash_history file is located in a user's home directory and keeps track of the commands executed by that user in Bash.
+* The df -h command shows the amount of free disk space on the system in a human-readable format, such as in gigabytes (G) and megabytes (M).
+* The lsusb -t command provides a hierarchical view of USB buses and connected devices, including their speeds. It allows you to visually confirm whether a device is operating at USB 3.0 speeds.
+* 
