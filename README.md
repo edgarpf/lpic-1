@@ -866,4 +866,21 @@ identify them.
 * The ls command in UNIX or Linux is used to list files and directories. The -l option displays the items in a long listing format, while the -a option displays all items, including hidden ones (those starting with a dot).
 * The apt-cache search command allows you to search the package cache for a specific keyword.
 * By using chmod 644, the permissions are set as -rw-r--r--. This grants read and write permissions to the owner and read-only permissions to the group and others.
-* 
+* The umask value is subtracted from the default permissions. For files, the default permissions are 666 (read and write for owner, group, and others). With a umask of 027, the permissions are 666 - 027 = 640, which translates to -rw-r-----.
+* The apt-file tool is used to search for files within packages, even if they aren't installed.
+* In SysVinit systems, telinit with the -h option can be used to halt the system immediately without sending any signals to processes.
+* The umask command defines the default permissions when a new file or directory is created. The mask value subtracts from the full permissions (which are 777 for files).
+* The /usr/lib/systemd/system/ directory contains the vendor-provided (or default) unit files
+* For custom services and modifications, the appropriate location to place the unit file is within /etc/systemd/system/
+* The command rpm -ql followed by the package name (without the .rpm extension) lists all the files and directories that are installed by that package.
+* The chown command with the syntax username: changes the owner of the file to the specified username while retaining the current group ownership of the file.
+* The -mtime option of the find command searches for files based on their modification time. When -mtime is followed by a negative number (like -2), it matches files that have been modified within the last 2 days.
+* The rpm --checksig command is used to verify the integrity of an RPM package as well as to check its signature to ensure that it's authentic and hasn't been tampered with.
+* The systemctl isolate command is used to switch the system to a new target immediately, but it doesn't set that target as the default for subsequent boots.
+* To ensure that a service starts automatically at boot time, the systemctl enable command is used.
+* The apt install command is the standard way to install a package using the apt tool on a Debian-based system. It will retrieve the package and its dependencies, then install them.
+* The -R option in the chgrp command is used to operate on files and directories recursively. Hence, to change the group ownership of a directory and all its contents, the -R option should be used.
+* The tar command with the -czvf options creates a gzipped (compressed) archive. -c stands for create a new archive, -z stands for compress using gzip, -v stands for verbose mode (showing the progress in the terminal), and -f allows specifying the filename.
+* The apt-get upgrade command is used to upgrade all currently installed packages on a Debian system. It will not remove any packages or install new ones.
+* apt-get update fetches the list of available packages and their versions but doesn't upgrade any packages.
+* The mkdir command is used to create directories. The -p option allows the creation of parent directories as needed.
