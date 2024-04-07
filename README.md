@@ -804,4 +804,35 @@ identify them.
 * The .bash_history file is located in a user's home directory and keeps track of the commands executed by that user in Bash.
 * The df -h command shows the amount of free disk space on the system in a human-readable format, such as in gigabytes (G) and megabytes (M).
 * The lsusb -t command provides a hierarchical view of USB buses and connected devices, including their speeds. It allows you to visually confirm whether a device is operating at USB 3.0 speeds.
+* On systems that use GRUB2 as the bootloader, the main configuration file is located at /boot/grub2/grub.cfg.
+* With systemd, the systemctl set-default command is used to set the default boot target. The target equivalent to the old runlevel 3 (multi-user mode without a graphical interface) is runlevel3.target.
+* Kernel parameters are usually added to the GRUB configuration file to ensure they are passed to the kernel during the boot process.
+* The /etc/inittab file in SysV-style init systems provides configuration for system initialization, including the default runlevel.
+* The -r option with the sort command sorts lines in reverse order, which means it will sort the names in reverse alphabetical order in this context.
+* The /etc/fstab file, often referred to as the file system table, contains the necessary information for the system to automatically mount partitions and devices at boot time.
+* In systems with GRUB 2, pressing the Esc key repeatedly during the boot sequence will interrupt the normal boot and bring up the GRUB menu, which allows access to the GRUB command line for troubleshooting purposes.
+* With SysVinit, runlevels are managed using the init command. Single-user mode corresponds to runlevel 1, so init 1 will switch the system to single-user mode.
+* The /boot/grub/menu.lst file is the main configuration file for the legacy GRUB (GRUB 0.9x).
+* In Linux systems that utilize SysVinit, the chkconfig command is often used to manage services and their runlevels.
+* In Linux systems that employ SysVinit, custom init scripts are placed in the /etc/init.d/ directory.
+* The -c option with tune2fs sets the maximum number of mounts before a check is forced on the filesystem.
+* While you can make permanent changes by editing the /etc/default/grub file, if you want to add a kernel parameter only for the next boot, the most straightforward way is to edit the desired boot entry directly in the GRUB menu at boot time.
+* By setting a timeout for the GRUB menu, you allow the system to display the menu for a specific number of seconds before booting the default option. This gives you the chance to select an alternative boot location if needed.
+* The nl command is used to number the lines of files. It provides more flexibility and options compared to the -n option with cat.
+* By creating a custom menu entry for the recovery mode in the GRUB configuration, you provide an alternative boot option that can be selected if the main OS fails to boot.
+* The grub-install command is used to install the GRUB bootloader to a device. By default, it installs GRUB to the MBR of the specified device. The --boot-directory option specifies the location of the /boot directory, which is typically where the GRUB configuration and modules are located.Secure Boot is a feature of UEFI that ensures that the system boots using only software that is signed with a recognized signature.
+* After making changes to the /etc/default/grub file, the update-grub2 command should be run to generate a new grub.cfg file.
+* The systemctl --failed command is utilized to list all units (like services) that have entered a failed state.
+* The paste command is used to join files horizontally (i.e., side by side). By default, it merges corresponding lines from files provided as arguments.
+* The basic grub-install command with the device name should be sufficient to install GRUB to the USB drive
+* initramfs (initial ram filesystem) acts as a temporary root filesystem during the boot process. When using disk encryption, the real root filesystem might be encrypted. In such cases, initramfs provides the necessary modules and tools, including decryption tools, to access and mount the real root filesystem, allowing the system to continue the boot process.
+* UEFI (Unified Extensible Firmware Interface) replaces the traditional BIOS and provides numerous advantages, including support for booting from large disks (over 2TB), better hardware initialization, and support for Secure Boot, among other features.
+* The systemctl mask command is used with systemd to prevent a service from being started, even manually.
+* The od command, short for "octal dump", is used to dump files in various formats. The -x option tells it to output the file in hexadecimal.
+* The init command is used to change runlevels in SysV-style init systems. By specifying a number (representing the desired runlevel) as an argument, the system will attempt to transition to that runlevel. In this case, init 3 will transition the system to runlevel 3.
+* The lsblk -f command lists all block devices and their corresponding filesystems, labels, and UUIDs, providing an easy way to identify the UUID of a specific partition.
+* The update-initramfs command is used to create, update, or delete an initramfs image. The -u option specifies that the image for the current kernel should be updated.
+* The systemctl get-default command is used to display the default boot target in a system managed by systemd.
+* The -n option with xfs_repair allows for a no-modify mode. This means the tool will only scan for inconsistencies and report them, but will not make any changes to the filesystem.
+* The -t option of xfs_fsr is used to set a maximum time limit for the defragmentation process, expressed in seconds. Hence, for 1 hour, it would be 3600 seconds.
 * 
