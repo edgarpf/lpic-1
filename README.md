@@ -835,4 +835,35 @@ identify them.
 * The systemctl get-default command is used to display the default boot target in a system managed by systemd.
 * The -n option with xfs_repair allows for a no-modify mode. This means the tool will only scan for inconsistencies and report them, but will not make any changes to the filesystem.
 * The -t option of xfs_fsr is used to set a maximum time limit for the defragmentation process, expressed in seconds. Hence, for 1 hour, it would be 3600 seconds.
+* The dpkg command is used to manage Debian packages directly. When you have a .deb file that you want to install, you would use dpkg --install followed by the package filename. The apt-get and apt commands are typically used to install packages from repositories, not directly from .deb files.
+* The shutdown command allows the administrator to schedule a system shutdown. The -h option tells the system to halt (power off), and the +10 schedules the action 10 minutes from the current time.
+* The ldd command displays the shared libraries required by each program or shared library specified on the command line. It's used to identify the shared libraries an executable is linked against.
+* The LD_LIBRARY_PATH is an environment variable that specifies a list of directories where the system should look for dynamic libraries before searching the usual default directories.
+* The acpid daemon listens to Advanced Configuration and Power Interface (ACPI) events and can be configured to take actions, such as shutting down the system, when specific events like the power button being pressed occur.
+* cp -r copies all content, including hidden files (thanks to the '/.'), from the source directory to the target directory recursively.
+* The SIGTERM signal is the default and safest way to kill a process. When sent to a process, it allows the process to catch the signal and release resources or save the state before shutting down gracefully.
+* ldconfig is a utility that is used to update the cache of shared libraries.
+* The correct command to disable a service from starting automatically on system boot using systemctl is "systemctl disable [service]".
+* The command umount -l /mnt/nfs_share performs a lazy unmount, which means it will detach the filesystem from the filesystem hierarchy immediately and cleanup all references to the filesystem once it is not busy anymore.
+* When you make changes to a systemd unit file, it's important to reload the systemd configuration to ensure those changes are recognized by the systemd manager. This is achieved using the systemctl daemon-reload command.
+* In the Linux file system hierarchy, the /lib directory typically contains the shared libraries that are required to boot the system and to run the commands in the root file system.
+* The shutdown -P +30 command will schedule a shutdown in 30 minutes, and the -P option ensures that the system will power off after the shutdown.
+* The split --bytes option allows you to specify the size of each split file. 1G denotes 1 gigabyte, which will split the file into 1GB chunks.
+* In the /etc/inittab file, the line starting with id: is used to set the default runlevel of the system.
+* killall sends a signal to all processes running with the specified name.
+* The runlevel command displays the current and previous runlevels of the system. It does not alter the system's state, but simply provides this information.
+* Using the -f option with the tail command allows you to monitor the file in real-time, displaying new lines as they are appended to the file.
+* The init 1 command changes the system to single-user mode.
+* The "pass" field in the /etc/fstab file determines the order in which fsck checks the filesystems at boot time. A value of "0" means the filesystem will not be checked, "1" means it's the root filesystem and will be checked first, and "2" indicates all other filesystems that should be checked.
+* The reboot command is used to restart the system immediately, making it the most direct way to achieve the desired outcome in this scenario.
+* The lsblk -d command lists all block devices in a tree-like format but omits partition information.
+* The blkid /dev/sda1 command displays attribute information (like UUID and filesystem type) for the given partition.
+* The grub-mkconfig command generates a GRUB 2 configuration file based on the system's current setup and scripts in /etc/grub.d/. Using the -o or --output option allows you to specify where the configuration file will be written.
+* The /etc/ld.so.conf file is a system configuration file used by the ldconfig command to determine which directories should be searched for shared libraries before the default directories are searched.
+* The dpkg -s command provides detailed information about a specific package
+* The dpkg-reconfigure command allows users to reconfigure packages that have been previously installed and configured.
+* The ln command without any options is used to create hard links. The first argument is the source (existing file) and the second argument is the name of the new hard link.
+* The ls command in UNIX or Linux is used to list files and directories. The -l option displays the items in a long listing format, while the -a option displays all items, including hidden ones (those starting with a dot).
+* The apt-cache search command allows you to search the package cache for a specific keyword.
+* By using chmod 644, the permissions are set as -rw-r--r--. This grants read and write permissions to the owner and read-only permissions to the group and others.
 * 
