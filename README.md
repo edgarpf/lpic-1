@@ -85,10 +85,6 @@ echo $PS1 $PS2 # primary and secondary prompt
 
 uname # informations about the machine. Use -p -m -s...
 ```
-The path of the command
-```
-which pwd
-```
 Search for a command
 ```
 apropos lda
