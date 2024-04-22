@@ -125,7 +125,7 @@ Sort lines/inverse
 sort file
 sort -r file
 ```
-Sort lines/inverse
+Show file with pagination
 ```
 less file
 ```
