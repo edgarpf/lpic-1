@@ -141,15 +141,15 @@ tail file
 tail -n 20 file
 tail -f file
 ```
-Show no repetion in lines (remove repetion only in lines in sequence)
+Show no repetition in lines (remove repetition only in lines in sequence)
 ```
 uniq file
 ```
-Show only lines with repetion
+Show only lines with repetition
 ```
 uniq -q file
 ```
-Show number of repetion for every line
+Show number of repetition for every line
 ```
 uniq -c file
 ```
