@@ -369,7 +369,7 @@ System architeture
 cat proc/cpuinfo
 lspci -k (show also modules)
 lspci -s id -v (show many details of specific resource attached to pci)
-lsusb -t (show in tree format
+lsusb -t (show in tree format)
 lsusb -d id -v (show many details of specific resource attached to usb)
 lsusb -s 01:20 (to verify which device is using the module)
 lsmod
